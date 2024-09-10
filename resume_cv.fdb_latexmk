@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1720841144 "resume_cv.xdv" "resume_cv.pdf" "resume_cv" 1720841145 0
-  "resume_cv.xdv" 1720841143 65512 e9a5984464f7d3cc1d036667ffdb3da0 "xelatex"
+["xdvipdfmx"] 1725941165 "resume_cv.xdv" "resume_cv.pdf" "resume_cv" 1725941165 0
+  "resume_cv.xdv" 1725941164 66824 524ecb01f1a8c1ade2f932ffdedfd021 "xelatex"
   (generated)
   "resume_cv.pdf"
   (rewritten before read)
-["xelatex"] 1720841141 "c:/Users/Phlagg/Documents/Projects/michael-woods-resume/resume_cv.tex" "resume_cv.xdv" "resume_cv" 1720841145 0
+["xelatex"] 1725941162 "c:/Users/Phlagg/Documents/Projects/michael-woods-resume/resume_cv.tex" "resume_cv.xdv" "resume_cv" 1725941165 0
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136801054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -164,12 +164,12 @@
   "awesome-cv.cls" 1698897268 26545 917966b404e5da33c473c370c9e735d7 ""
   "c:/Users/Phlagg/Documents/Projects/michael-woods-resume/resume_cv.tex" 1706585504 5551 5c3a3d5ab5d835b79c3a01f18cd82407 ""
   "cv-sections/education.tex" 1698897268 1357 28c36d0ddb81b8cd38b43ff6c0ee51d9 ""
-  "cv-sections/experience.tex" 1720841133 8195 6f24534a9094bd723a5de5cfb665dbcb ""
+  "cv-sections/experience.tex" 1725941153 8166 60f906d02ba8fe83fdadd0926a407709 ""
   "cv-sections/memberships.tex" 1698897268 1206 df13852f249ed5e5cb06b6715b2ee72d ""
-  "cv-sections/skills.tex" 1707881493 1326 673206c7e15711fa81c1d8e247b76757 ""
+  "cv-sections/skills.tex" 1725941045 1594 a25d8a8cceaf1acb65aa48dcf4c98cd0 ""
   "fontawesome.sty" 1698897268 84729 355f16a7bd7ed1782c4e1f3a0b78b931 ""
-  "resume_cv.aux" 1720841143 214 041658a42d81247ba75a1a20ca02ecad "xelatex"
-  "resume_cv.out" 1720841143 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "resume_cv.aux" 1725941164 214 041658a42d81247ba75a1a20ca02ecad "xelatex"
+  "resume_cv.out" 1725941164 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   "resume_cv.tex" 1706585504 5551 5c3a3d5ab5d835b79c3a01f18cd82407 ""
   (generated)
   "resume_cv.aux"
