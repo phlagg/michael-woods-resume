@@ -30,6 +30,11 @@
 
 # OS generated files #
 ######################
+.aux
+.fls
+.xdv
+.out
+.fdb_latexmk
 .DS_Store
 .DS_Store?
 ._*
