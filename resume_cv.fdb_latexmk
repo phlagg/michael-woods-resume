@@ -1,6 +1,22 @@
 # Fdb version 4
+<<<<<<< HEAD
 ["pdflatex"] 1725942596 "c:/Users/Phlagg/Documents/Projects/michael-woods-resume/resume_cv.tex" "resume_cv.pdf" "resume_cv" 1725942597 2
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+=======
+["xdvipdfmx"] 1725941165 "resume_cv.xdv" "resume_cv.pdf" "resume_cv" 1725941165 0
+  "resume_cv.xdv" 1725941164 66824 524ecb01f1a8c1ade2f932ffdedfd021 "xelatex"
+  (generated)
+  "resume_cv.pdf"
+  (rewritten before read)
+["xelatex"] 1725941162 "c:/Users/Phlagg/Documents/Projects/michael-woods-resume/resume_cv.tex" "resume_cv.xdv" "resume_cv" 1725941165 0
+  "C:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136801054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi9.tfm" 1136765053 1524 d89e2d087a9828407a196f428428ef4a ""
+  "C:/Program Files/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
+  "C:/Program Files/MiKTeX/tex/generic/iftex/ifluatex.sty" 1643997108 492 1994775aa15b0d1289725a0b1bbc2d4c ""
+>>>>>>> eb9b16ac3c6d335157b6ea35807b921d3667871b
   "C:/Program Files/MiKTeX/tex/generic/iftex/iftex.sty" 1643997108 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "C:/Program Files/MiKTeX/tex/generic/iftex/ifvtex.sty" 1643997108 1057 525c2192b5febbd8c1f662c9468335bb ""
   "C:/Program Files/MiKTeX/tex/generic/iftex/ifxetex.sty" 1643997108 488 4565444a3e75e59cb2702dc42e18f482 ""
@@ -30,7 +46,17 @@
   "C:/Users/Phlagg/AppData/Roaming/MiKTeX/tex/latex/xifthen/xifthen.sty" 1448274436 5689 1bfa68243e89a54479e7d0580773c57e ""
   "awesome-cv.cls" 1698897268 26545 917966b404e5da33c473c370c9e735d7 ""
   "c:/Users/Phlagg/Documents/Projects/michael-woods-resume/resume_cv.tex" 1706585504 5551 5c3a3d5ab5d835b79c3a01f18cd82407 ""
+<<<<<<< HEAD
   "resume_cv.aux" 1725942596 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+=======
+  "cv-sections/education.tex" 1698897268 1357 28c36d0ddb81b8cd38b43ff6c0ee51d9 ""
+  "cv-sections/experience.tex" 1725941153 8166 60f906d02ba8fe83fdadd0926a407709 ""
+  "cv-sections/memberships.tex" 1698897268 1206 df13852f249ed5e5cb06b6715b2ee72d ""
+  "cv-sections/skills.tex" 1725941045 1594 a25d8a8cceaf1acb65aa48dcf4c98cd0 ""
+  "fontawesome.sty" 1698897268 84729 355f16a7bd7ed1782c4e1f3a0b78b931 ""
+  "resume_cv.aux" 1725941164 214 041658a42d81247ba75a1a20ca02ecad "xelatex"
+  "resume_cv.out" 1725941164 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+>>>>>>> eb9b16ac3c6d335157b6ea35807b921d3667871b
   "resume_cv.tex" 1706585504 5551 5c3a3d5ab5d835b79c3a01f18cd82407 ""
   (generated)
   "resume_cv.aux"
