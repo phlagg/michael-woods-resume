@@ -4,20 +4,24 @@ on: [push]
 jobs:
   container:
     runs-on: ubuntu-latest
-    # Uses your exact preferred container image
     container: kjarosh/latex:2025.1-full
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Generate Date Suffix
+        # Creates the '_MMYYYY' string format (e.g., _062026) and exports it to the environment pipeline
+        id: date
+        run: echo "SUFFIX=$(date +'_%b%Y')" >> $GITHUB_ENV
+
       - name: Build using latexmk
-        # Replicates your exact directory flags and interaction configurations
+        # References the exported environment suffix dynamically across tools
         run: |
-          latexmk -pdfxe -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
+          latexmk -pdfxe -jobname=Michael_Woods${{ env.SUFFIX }} -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
 
       - name: Upload document
         uses: actions/upload-artifact@v4
         with:
           name: main-document
-          # Points directly to your custom 'pdf' directory output
-          path: pdf/resume_cv.pdf
+          # Fetches the exactly matching filename from your pdf directory
+          path: pdf/Michael_Woods${{ env.SUFFIX }}.pdf

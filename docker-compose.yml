@@ -1,0 +1,32 @@
+services:
+  latex-builder:
+    build: .
+    container_name: xelatex-compiler
+    # Dynamically injects your local user and group IDs
+    user: "${UID:-1000}:${GID:-1000}"
+    working_dir: /src
+    volumes:
+      - ./:/src
+    environment:
+      - FILENAME=resume_cv
+    command: >
+      latexmk -pdfxe
+      -interaction=nonstopmode
+      -outdir=pdf
+      -auxdir=aux
+      resume_cv.tex
+
+  latex-watcher:
+    image: kjarosh/latex:2025.1-full
+    container_name: xelatex-watcher
+    user: "${UID:-1000}:${GID:-1000}"
+    working_dir: /src
+    volumes:
+      - ./:/src
+    command: >
+      latexmk -pdfxe
+      -pvc
+      -interaction=nonstopmode
+      -outdir=pdf
+      -auxdir=aux
+      resume_cv.tex
