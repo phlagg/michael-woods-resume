@@ -7,21 +7,34 @@ jobs:
     container: kjarosh/latex:2025.1-full
     steps:
       - name: Checkout repository
-        # Upgraded to v5 to execute on the Node 24 runtime
         uses: actions/checkout@v5
 
       - name: Generate Date Suffix
         id: date
         run: echo "SUFFIX=$(date +'_%b%Y')" >> $GITHUB_ENV
 
-      - name: Build using latexmk
-        # Added -cd flag to prevent layout and font-tracking breakages
+      - name: Build PDF using latexmk
         run: |
           latexmk -pdfxe -cd -jobname=Michael_Woods${{ env.SUFFIX }} -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
 
-      - name: Upload document
-        # Upgraded to v6 to execute on the Node 24 runtime
+      - name: Install text tools on host runner
+        run: |
+          apt-get update && apt-get install -y poppler-utils
+
+      - name: Extract text from PDF
+        # UPDATED: Outputs to the same name inside the pdf directory
+        run: |
+          pdftotext -layout pdf/Michael_Woods${{ env.SUFFIX }}.pdf pdf/Michael_Woods${{ env.SUFFIX }}.txt
+
+      - name: Upload PDF document
         uses: actions/upload-artifact@v6
         with:
-          name: Michael_Woods${{ env.SUFFIX }}
+          name: PDF-Document-${{ env.SUFFIX }}
           path: pdf/Michael_Woods${{ env.SUFFIX }}.pdf
+
+      - name: Upload Text document
+        uses: actions/upload-artifact@v6
+        with:
+          name: Text-Document-${{ env.SUFFIX }}
+          # UPDATED: Matches the new path and filename pattern
+          path: pdf/Michael_Woods${{ env.SUFFIX }}.txt

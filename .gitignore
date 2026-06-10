@@ -33,6 +33,7 @@
 aux
 *.aux
 pdf
+out
 *.fls
 *.xdv
 *.out
