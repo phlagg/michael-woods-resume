@@ -1,18 +1,23 @@
 name: Compile LaTeX
-on: [ push ]
+on: [push]
+
 jobs:
   container:
     runs-on: ubuntu-latest
-    container: kjarosh/latex:2024.4
+    # Uses your exact preferred container image
+    container: kjarosh/latex:2025.1-full
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build using xelatex
-        run: xelatex -output-directory=out resume_cv.tex
+      - name: Build using latexmk
+        # Replicates your exact directory flags and interaction configurations
+        run: |
+          latexmk -pdfxe -interaction=nonstopmode -outdir=pdf -auxdir=aux main.tex
 
       - name: Upload document
         uses: actions/upload-artifact@v4
         with:
           name: main-document
-          path: out/michael-woods-cv.pdf
+          # Points directly to your custom 'pdf' directory output
+          path: pdf/main.pdf

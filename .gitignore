@@ -30,6 +30,7 @@
 
 # OS generated files #
 ######################
+aux
 *.aux
 *.fls
 *.xdv
