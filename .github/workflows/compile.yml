@@ -13,11 +13,11 @@ jobs:
       - name: Build using latexmk
         # Replicates your exact directory flags and interaction configurations
         run: |
-          latexmk -pdfxe -interaction=nonstopmode -outdir=pdf -auxdir=aux main.tex
+          latexmk -pdfxe -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
 
       - name: Upload document
         uses: actions/upload-artifact@v4
         with:
           name: main-document
           # Points directly to your custom 'pdf' directory output
-          path: pdf/main.pdf
+          path: pdf/resume_cv.pdf
