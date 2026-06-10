@@ -22,6 +22,6 @@ jobs:
       - name: Upload document
         uses: actions/upload-artifact@v4
         with:
-          name: main-document
+          name: Michael_Woods${{ env.SUFFIX }}
           # Fetches the exactly matching filename from your pdf directory
           path: pdf/Michael_Woods${{ env.SUFFIX }}.pdf

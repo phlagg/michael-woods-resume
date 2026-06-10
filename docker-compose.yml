@@ -10,11 +10,16 @@ services:
     environment:
       - FILENAME=resume_cv
     command: >
+      /bin/sh -c "
+      SUFFIX=\$$(date +'_%b%Y') &&
       latexmk -pdfxe
+      -cd
+      -jobname=Michael_Woods\$$SUFFIX
       -interaction=nonstopmode
       -outdir=pdf
       -auxdir=aux
       resume_cv.tex
+      "
 
   latex-watcher:
     image: kjarosh/latex:2025.1-full
@@ -24,9 +29,14 @@ services:
     volumes:
       - ./:/src
     command: >
+      /bin/sh -c "
+      SUFFIX=\$$(date +'_%b%Y') &&
       latexmk -pdfxe
+      -cd
+      -jobname=Michael_Woods\$$SUFFIX
       -pvc
       -interaction=nonstopmode
       -outdir=pdf
       -auxdir=aux
       resume_cv.tex
+      "
