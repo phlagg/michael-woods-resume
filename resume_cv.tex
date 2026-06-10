@@ -7,7 +7,7 @@
 % http://www.LaTeXTemplates.com
 %
 % Original author:
-% Claud D. Park (posquit0.bj@gmail.com) with modifications by 
+% Claud D. Park (posquit0.bj@gmail.com) with modifications by
 % Vel (vel@latextemplates.com)
 %
 % License:
@@ -15,8 +15,8 @@
 %
 % Important note:
 % This template must be compiled with XeLaTeX, the below lines will ensure this
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
+!TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -47,7 +47,7 @@
 \fancyhf{}
 \fancyhead[L]{\tikz[overlay, remember picture] {
     % \draw ([shift={(15mm,-7.5mm)}]current page.north west) rectangle ++(190mm,-265mm);
-    % \draw ([shift={(190mm,-7mm)}]current page.north east) -- ++(0,-5); 
+    % \draw ([shift={(190mm,-7mm)}]current page.north east) -- ++(0,-5);
     \draw [line width=\borderThick, lighttext]([shift={(\borderLeft,-\borderTop)}]current page.north west) -- ++(\letterWidth-\borderLeft-\borderRight-\fold,0); %/ top border
     \draw [line width=\borderThick, lighttext]([shift={(\borderLeft,-\borderTop)}]current page.north west) -- ++(0,-\letterHeight+\borderTop+\borderBottom); %/ left border
 
@@ -55,7 +55,7 @@
 
     \draw [line width=\borderThick, lighttext]([shift={(\borderLeft,\borderBottom)}]current page.south west) -- ++(\letterWidth-\borderLeft-\borderRight,0); %/ bottom border
     \draw [line width=\borderThick, lighttext]([shift={(-\borderRight,\borderBottom)}]current page.south east) -- ++(0,\letterHeight-\borderTop-\borderBottom-\fold); %/ right border
-  
+
   }
 }
 
@@ -65,7 +65,7 @@
 \definecolor{awesome}{HTML}{3f0fb8} % Uncomment if you would like to specify your own color
 
 % Colors for text - uncomment and modify
-\definecolor{darktext}{HTML}{202020} 
+\definecolor{darktext}{HTML}{202020}
 \definecolor{text}{HTML}{202020}
 \definecolor{graytext}{HTML}{202020}
 %\definecolor{lighttext}{HTML}{414141}
@@ -101,7 +101,7 @@
 
 \makecvfooter{\today}{Michael Woods, P.Eng.~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
-% Justify 
+% Justify
 %----------------------------------------------------------------------------------------
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -127,8 +127,6 @@
 % \input{cv-sections/presentation.tex}
 % \input{cv-sections/writing.tex}
 % \input{cv-sections/committees.tex}
-\input{cv-sections/keywords.tex}
-
 %----------------------------------------------------------------------------------------
 
 \end{document}

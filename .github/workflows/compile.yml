@@ -1,0 +1,18 @@
+name: Compile LaTeX
+on: [ push ]
+jobs:
+  container:
+    runs-on: ubuntu-latest
+    container: kjarosh/latex:2024.4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build using xelatex
+        run: xelatex -pdf -output-directory=out resume_cv.tex
+
+      - name: Upload document
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-document
+          path: out/michael-woods-cv.pdf
