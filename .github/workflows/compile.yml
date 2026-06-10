@@ -15,7 +15,7 @@ jobs:
 
       - name: Build PDF using latexmk
         run: |
-          latexmk -pdfxe -cd -jobname=Michael_Woods${{ env.SUFFIX }} -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
+          latexmk -pdfxe -cd -jobname=Michael_Woods${{ env.SUFFIX }} -interaction=nonstopmode -outdir=out -auxdir=aux resume_cv.tex
 
       - name: Install text tools on host runner
         run: |
@@ -24,17 +24,12 @@ jobs:
       - name: Extract text from PDF
         # UPDATED: Outputs to the same name inside the pdf directory
         run: |
-          pdftotext -layout pdf/Michael_Woods${{ env.SUFFIX }}.pdf pdf/Michael_Woods${{ env.SUFFIX }}.txt
+          pdftotext -layout out/Michael_Woods${{ env.SUFFIX }}.pdf out/Michael_Woods${{ env.SUFFIX }}.txt
 
-      - name: Upload PDF document
+      - name: Upload documents
         uses: actions/upload-artifact@v6
         with:
-          name: PDF-Document-${{ env.SUFFIX }}
-          path: pdf/Michael_Woods${{ env.SUFFIX }}.pdf
-
-      - name: Upload Text document
-        uses: actions/upload-artifact@v6
-        with:
-          name: Text-Document-${{ env.SUFFIX }}
-          # UPDATED: Matches the new path and filename pattern
-          path: pdf/Michael_Woods${{ env.SUFFIX }}.txt
+          name: Michael_Woods_Documents${{ env.SUFFIX }}
+          path: |
+            out/Michael_Woods${{ env.SUFFIX }}.pdf
+            out/Michael_Woods${{ env.SUFFIX }}.txt
