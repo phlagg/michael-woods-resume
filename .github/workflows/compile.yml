@@ -19,7 +19,7 @@ jobs:
 
       - name: Install text tools on host runner
         run: |
-          apt-get update && apt-get install -y poppler-utils
+          apk add --no-cache poppler-utils
 
       - name: Extract text from PDF
         # UPDATED: Outputs to the same name inside the pdf directory
