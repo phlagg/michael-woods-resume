@@ -7,21 +7,21 @@ jobs:
     container: kjarosh/latex:2025.1-full
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        # Upgraded to v5 to execute on the Node 24 runtime
+        uses: actions/checkout@v5
 
       - name: Generate Date Suffix
-        # Creates the '_MMYYYY' string format (e.g., _062026) and exports it to the environment pipeline
         id: date
         run: echo "SUFFIX=$(date +'_%b%Y')" >> $GITHUB_ENV
 
       - name: Build using latexmk
-        # References the exported environment suffix dynamically across tools
+        # Added -cd flag to prevent layout and font-tracking breakages
         run: |
-          latexmk -pdfxe -jobname=Michael_Woods${{ env.SUFFIX }} -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
+          latexmk -pdfxe -cd -jobname=Michael_Woods${{ env.SUFFIX }} -interaction=nonstopmode -outdir=pdf -auxdir=aux resume_cv.tex
 
       - name: Upload document
-        uses: actions/upload-artifact@v4
+        # Upgraded to v6 to execute on the Node 24 runtime
+        uses: actions/upload-artifact@v6
         with:
           name: Michael_Woods${{ env.SUFFIX }}
-          # Fetches the exactly matching filename from your pdf directory
           path: pdf/Michael_Woods${{ env.SUFFIX }}.pdf
