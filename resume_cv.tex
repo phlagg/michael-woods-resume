@@ -26,19 +26,123 @@
 
 \documentclass[12pt, letterpaper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
 
-\geometry{left=2.75cm, top=1.5cm, right=2.75cm, bottom=1.75cm, footskip=.5cm} % Configure page margins with geometry
-
 \fontdir[fonts/] % Specify the location of the included fonts
+% Set font for header (default is Roboto)
+\newfontfamily\mybodyfont[
+  Path=fonts/,
+  Scale=0.9,
+  UprightFont=*-Regular.ttf,
+  ItalicFont=*-Italic.ttf,
+  BoldFont=*-Bold.ttf,
+  BoldItalicFont=*-BoldItalic.ttf,
+]{SauceCodeProNerdFontPropo}
+
+\newfontfamily\mybodyfontlight[
+  Path=fonts/,
+  Scale=0.9,
+  UprightFont=*-Light.ttf,
+  ItalicFont=*-LightItalic.ttf,
+]{IntoneMonoNerdFontPropo}
+
+\newfontfamily\myheaderfont[
+  Path=fonts/,
+  Scale=0.85,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{SauceCodeProNerdFontPropo}
+
+\newfontfamily\myheaderfontlight[
+  Path=fonts/,
+  Scale=0.85,
+  UprightFont=*-Light,
+  ItalicFont=*-LightItalic,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-MediumItalic,
+]{SauceCodeProNerdFontPropo}
+
+\renewcommand{\bodyfont}{\mybodyfont}
+\renewcommand{\bodyfontlight}{\mybodyfontlight}
+
+\renewcommand{\footerfont}{\mybodyfont}
+
+\renewcommand{\headerfont}{\myheaderfont}
+\renewcommand{\headerfontlight}{\myheaderfontlight}
+
+
+% \renewenvironment{cvskills}{%
+%   \vspace{\acvSectionContentTopSkip}
+%   \vspace{-2.0mm}
+%   \begin{center}
+%     \setlength\tabcolsep{1ex}
+%     \setlength{\extrarowheight}{0pt}
+%     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.78}}}
+% }{%
+%     \end{tabular*}
+%   \end{center}
+% }
+
+
+\usepackage{multicol}
+\newcommand{\skillcolumn}[2]{%
+  \begin{minipage}[t][1.3cm][t]{\linewidth}
+    \vspace{-5mm}%
+    \raggedright
+    \skilltypestyle{#1}
+    \begin{skilllist}
+      #2
+    \end{skilllist}
+  \end{minipage}
+}
+
+\newcommand{\skillcell}[2]{%
+  \entrytitlestyle{#1}%
+  \begin{skilllist}
+    #2
+  \end{skilllist}
+}
+
+\newenvironment{skilllist}{%
+  \begingroup
+  \fontsize{9pt}{10pt}\selectfont\bodyfontlight\color{text}
+  \begin{itemize}[leftmargin=3ex,rightmargin=0ex,nosep,noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{{\bodyfont\color{awesome}}}
+}{%
+  \end{itemize}
+  \endgroup
+  \vspace{-2mm}
+}
+
+% Define an environment for cvitems(for cventry)
+\renewenvironment{cvitems}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+    \begin{itemize}[leftmargin=4.5ex,rightmargin=0ex, nosep, noitemsep] % left was 2ex, no right
+      \setlength{\parskip}{0pt}
+      \renewcommand{\labelitemi}{{\bodyfont\color{awesome}=>}}
+      }{%
+    \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
+\setlist[itemize]{label={{\bodyfont\color{awesome}=>}},leftmargin=4.5ex}
+
+
+
+\geometry{left=1.75cm, right=1.75cm, top=1.75cm, bottom=1.75cm, footskip=.5cm} % Configure page margins with geometry
 
 \newcommand{\letterWidth}{215.9mm}
 \newcommand{\letterHeight}{279.4mm}
 \newcommand{\borderThick}{0.75mm}
 
-\newcommand{\borderTop}{5mm}
-\newcommand{\borderBottom}{5mm}
+\newcommand{\borderTop}{8mm}
+\newcommand{\borderBottom}{8mm}
 
-\newcommand{\borderLeft}{15mm}
-\newcommand{\borderRight}{15mm}
+\newcommand{\borderLeft}{10mm}
+\newcommand{\borderRight}{10mm}
 \newcommand{\fold}{15mm}
 
 \usepackage{tikz}
@@ -94,19 +198,19 @@
 %\extrainfo{test} % Other text you want to include on this line
 
 
-% \position{Electronics Engineer{\enskip\cdotp\enskip}Embedded Programmer{\enskip\cdotp\enskip}Motorcycle Rider} % Your expertise/fields
+% \position{Software{\enskip\cdotp\enskip}Firmware{\enskip\cdotp\enskip}Hardware} % Your expertise/fields
 % \position{Electronics Engineer{\enskip\cdotp\enskip}Embedded Programmer} % Your expertise/fields
-\position{Electronics and Embedded Software Engineer}
+\position{Firmware and Embedded Software Engineer}
 % \quote{``Make the change that you want to see in the world."} % A quote or statement
 
 \makecvfooter{\today}{Michael Woods, P.Eng.~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
 % Justify
 %----------------------------------------------------------------------------------------
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
+\tolerance=800
+\emergencystretch=2em
+\hyphenpenalty=500
+\hbadness=800
 %----------------------------------------------------------------------------------------
 
 \begin{document}
