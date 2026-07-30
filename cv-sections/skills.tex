@@ -2,56 +2,49 @@
 %	SECTION TITLE
 %----------------------------------------------------------------------------------------
 \cvsection{Skills}
+
 %----------------------------------------------------------------------------------------
 %	SECTION CONTENT
 %----------------------------------------------------------------------------------------
-\begin{list}{}{%
-  \setlength{\leftmargin}{1em}%
-  \setlength{\rightmargin}{0em}%
+\begin{adjustwidth}{3ex}{-6ex}
+\setlength{\columnsep}{3ex}
+\raggedcolumns
+\center
+\vspace{-1.5ex}
+\begin{multicols}{3}
+\noindent
+\skillcolumn{firmware\_dev/}{
+  \item {\bodyfont\color{awesome}├─} C/C++ (bare‑metal, RTOS)
+  \item {\bodyfont\color{awesome}├─} CAN, J1939, DoIP, UDS
+  \item {\bodyfont\color{awesome}├─} SPI, I2C, UART, Ethernet
+  \item {\bodyfont\color{awesome}├─} FreeRTOS, lwIP
+  \item {\bodyfont\color{awesome}└─} STM32 HAL/LL, DMA, timers
 }
-\item
-\begin{multicols}{4}
-% \raggedcolumns
-
-
-\skillcolumn{Software}{
-  \item Python, Go
-  \item Linux/WSL
-  \item AWS Lambda
-  \item Tkinter (Python), tview (Go) UI frameworks
-}
-
 \columnbreak
-
-\skillcolumn{Firmware}{
-  \item C/C++
-  \item HAL/LL, DMA, timers
-  \item FreeRTOS, lwIP
-  \item CAN 2.0B, J1939, DoIP, UDS/ZEVonUDS
-  \item SPI, I2C, RS‑232/485, Ethernet
+\skillcolumn{hardware\_and\_debugging/}{
+  \item {\bodyfont\color{awesome}├─} Schematic capture \& PCB design
+  \item {\bodyfont\color{awesome}├─} Sensors selection
+  \item {\bodyfont\color{awesome}├─} Motor drives \& actuators
+  \item {\bodyfont\color{awesome}├─} STM32F7/H7, ESP32/8266 MCUs
+  \item {\bodyfont\color{awesome}└─} Debugging tools:
+  \item {\bodyfont\color{awesome}\phantom{│}\kern2.2ex├─} Oscilloscope, multimeter
+  \item {\bodyfont\color{awesome}\phantom{│}\kern2.2ex├─} CANalyzer, logic analyzer
+  \item {\bodyfont\color{awesome}\phantom{│}\kern2.2ex└─} GDB, JTAG
 }
-
 \columnbreak
-\skillcolumn{Hardware}{
-  \item STM32F4/F7, ESP32/8266
-  \item Digital \& analog circuits
-  \item Sensors \& actuators
-  \item Power electronics \& motor drives
+\skillcolumn{software\_dev/}{
+  \item {\bodyfont\color{awesome}├─} Python, Go
+  \item {\bodyfont\color{awesome}├─} UI Frameworks/
+  \item {\bodyfont\color{awesome}│\kern2.2ex├─} Tkinter (Python)
+  \item {\bodyfont\color{awesome}│\kern2.2ex└─} tview (Go)
+  \item {\bodyfont\color{awesome}├─} Linux / WSL
+  \item {\bodyfont\color{awesome}├─} Git, SVN, Perforce
+  \item {\bodyfont\color{awesome}├─} Ninja, CMake
+  \item {\bodyfont\color{awesome}└─} Docker
 }
-
-\columnbreak
-\skillcolumn{Tools \& Platforms}{
-  \item Git / SVN / Perforce
-  \item CMake
-  \item CANalyzer
-  \item GDB
-    \item Oscilloscope, logic analyzer, multimeter
-}
-
-
 \end{multicols}
-\end{list}
-
+\end{adjustwidth}
+\vspace{-4ex}
 %------------------------------------------------
 % \begin{cvskills}
 %------------------------------------------------

@@ -85,19 +85,10 @@
 
 
 \usepackage{multicol}
+\usepackage{changepage}
 \newcommand{\skillcolumn}[2]{%
-  \begin{minipage}[t][1.3cm][t]{\linewidth}
-    \vspace{-5mm}%
-    \raggedright
-    \skilltypestyle{#1}
-    \begin{skilllist}
-      #2
-    \end{skilllist}
-  \end{minipage}
-}
-
-\newcommand{\skillcell}[2]{%
-  \entrytitlestyle{#1}%
+  {\skilltypestyle{#1}}%
+  \vspace{-2.0mm}
   \begin{skilllist}
     #2
   \end{skilllist}
@@ -105,14 +96,15 @@
 
 \newenvironment{skilllist}{%
   \begingroup
-  \fontsize{9pt}{10pt}\selectfont\bodyfontlight\color{text}
-  \begin{itemize}[leftmargin=3ex,rightmargin=0ex,nosep,noitemsep]
+  \raggedright
+  \fontsize{9pt}{1em}\selectfont\bodyfontlight\color{text}
+  \begin{itemize}[leftmargin=0ex,rightmargin=0ex,nosep,noitemsep]
     \setlength{\parskip}{0pt}
-    \renewcommand{\labelitemi}{{\bodyfont\color{awesome}}}
+    \renewcommand{\labelitemi}{{\bodyfont\color{awesome}}}
+    % \renewcommand{\labelitemi}{{\bodyfont\color{awesome}}}
 }{%
   \end{itemize}
   \endgroup
-  \vspace{-2mm}
 }
 
 % Define an environment for cvitems(for cventry)
