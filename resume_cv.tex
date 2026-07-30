@@ -30,45 +30,53 @@
 % Set font for header (default is Roboto)
 \newfontfamily\mybodyfont[
   Path=fonts/,
-  Scale=0.9,
+  Scale=1.0,
   UprightFont=*-Regular.ttf,
   ItalicFont=*-Italic.ttf,
   BoldFont=*-Bold.ttf,
   BoldItalicFont=*-BoldItalic.ttf,
-]{SauceCodeProNerdFontPropo}
+]{IntoneMonoNerdFontMono}
 
 \newfontfamily\mybodyfontlight[
   Path=fonts/,
-  Scale=0.9,
+  Scale=1.0,
   UprightFont=*-Light.ttf,
   ItalicFont=*-LightItalic.ttf,
-]{IntoneMonoNerdFontPropo}
+]{IntoneMonoNerdFontMono}
 
-\newfontfamily\myheaderfont[
-  Path=fonts/,
-  Scale=0.85,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-]{SauceCodeProNerdFontPropo}
-
-\newfontfamily\myheaderfontlight[
-  Path=fonts/,
-  Scale=0.85,
-  UprightFont=*-Light,
-  ItalicFont=*-LightItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
-]{SauceCodeProNerdFontPropo}
+% \newfontfamily\mybodyfontextralight[
+%   Path=fonts/,
+%   Scale=1.0,
+%   UprightFont=*-ExtraLight.ttf,
+%   ItalicFont=*-ExtraLightItalic.ttf,
+% ]{IntoneMonoNerdFontMono}
+\newcommand{\bodyfontextralight}{\mybodyfontlight\scalebox{0.9}}
 
 \renewcommand{\bodyfont}{\mybodyfont}
 \renewcommand{\bodyfontlight}{\mybodyfontlight}
 
-\renewcommand{\footerfont}{\mybodyfont}
+
+\newfontfamily\myheaderfont[
+  Path=fonts/,
+  Scale=1.0,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{IntoneMonoNerdFontMono}
+
+\newfontfamily\myheaderfontlight[
+  Path=fonts/,
+  Scale=1.0,
+  UprightFont=*-Light,
+  ItalicFont=*-LightItalic,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-MediumItalic,
+]{IntoneMonoNerdFontMono}
 
 \renewcommand{\headerfont}{\myheaderfont}
 \renewcommand{\headerfontlight}{\myheaderfontlight}
+\renewcommand{\footerfont}{\mybodyfont}
 
 
 % \renewenvironment{cvskills}{%
