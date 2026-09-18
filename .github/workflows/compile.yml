@@ -26,10 +26,16 @@ jobs:
         run: |
           pdftotext -layout out/Michael_Woods${{ env.SUFFIX }}.pdf out/Michael_Woods${{ env.SUFFIX }}.txt
 
-      - name: Upload documents
-        uses: actions/upload-artifact@v6
+      - name: Upload pdf
+        uses: actions/upload-artifact@v7
         with:
           name: Michael_Woods_Documents${{ env.SUFFIX }}
-          path: |
-            out/Michael_Woods${{ env.SUFFIX }}.pdf
-            out/Michael_Woods${{ env.SUFFIX }}.txt
+          archive: false
+          path: out/Michael_Woods${{ env.SUFFIX }}.pdf
+
+      - name: Upload text
+        uses: actions/upload-artifact@v7
+        with:
+          name: Michael_Woods_Documents${{ env.SUFFIX }}
+          archive: false
+          path: out/Michael_Woods${{ env.SUFFIX }}.txt
